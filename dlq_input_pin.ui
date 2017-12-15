@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>dlq_input_pin</class>
+ <widget class="QDialog" name="dlq_input_pin">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>247</width>
+    <height>145</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog {
+    border-image: url(&quot;:/images/inputPin&quot;) 0 0 0 0;
+	}
+ QLineEdit:hover {
+
+  border: 3px solid rgb(248, 248, 128);
+}
+
+ QLineEdit:pressed {
+
+  border: 3px solid rgb(248, 248, 128);
+background: rgb(232, 232, 232);
+}
+</string>
+  </property>
+  <widget class="QPushButton" name="btnOk">
+   <property name="geometry">
+    <rect>
+     <x>29</x>
+     <y>108</y>
+     <width>89</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>8</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+     background-color: rgb(248, 248, 128);
+
+    border-top: 2px solid rgb(100, 2, 24);
+  border-right: 6px outset rgb(159, 122, 16);
+  border-bottom: 6px outset rgb(159, 122, 16);
+  border-left: 6px outset rgb(159, 122, 16);
+
+ }
+
+ QPushButton:hover {
+background-color: rgb(248, 238, 0);
+  border-right: 6px outset rgb(200, 122, 16);
+  border-bottom: 6px outset rgb(200, 122, 16);
+  border-left: 6px outset rgb(200, 122, 16);
+}</string>
+   </property>
+   <property name="text">
+    <string>ОK</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnCancel">
+   <property name="geometry">
+    <rect>
+     <x>124</x>
+     <y>108</y>
+     <width>89</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>8</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+     background-color: rgb(248, 248, 128);
+
+    border-top: 2px solid rgb(100, 2, 24);
+  border-right: 6px outset rgb(159, 122, 16);
+  border-bottom: 6px outset rgb(159, 122, 16);
+  border-left: 6px outset rgb(159, 122, 16);
+
+ }
+
+ QPushButton:hover {
+background-color: rgb(248, 238, 0);
+  border-right: 6px outset rgb(200, 122, 16);
+  border-bottom: 6px outset rgb(200, 122, 16);
+  border-left: 6px outset rgb(200, 122, 16);
+}</string>
+   </property>
+   <property name="text">
+    <string>Отмена</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="editPin">
+   <property name="geometry">
+    <rect>
+     <x>15</x>
+     <y>70</y>
+     <width>221</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="echoMode">
+    <enum>QLineEdit::Password</enum>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnClose">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>7</y>
+     <width>20</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+     background:url(&quot;:/images/close.png&quot;);
+  }
+
+ QPushButton:hover {
+ background-image:url(&quot;:/images/close1.png&quot;);
+}
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>16</x>
+     <y>40</y>
+     <width>171</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Введите PIN-код</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
