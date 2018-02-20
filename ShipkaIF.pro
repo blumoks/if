@@ -24,7 +24,9 @@ SOURCES += main.cpp\
     cmd.cpp \
     dlglongerr.cpp \
     dlq_input_pin.cpp \
-    dlg_wait.cpp
+    dlg_wait.cpp \
+    errorhandler.cpp \
+    shipkalogfile.cpp
 
 HEADERS  += mainwindow.h \
     dlg_mess_pin.h \
@@ -36,7 +38,9 @@ HEADERS  += mainwindow.h \
     cmd.h \
     dlglongerr.h \
     dlq_input_pin.h \
-    dlg_wait.h
+    dlg_wait.h \
+    errorhandler.h \
+    shipkalogfile.h
 
 FORMS    += mainwindow.ui \
     dlg_mess_pin.ui \
