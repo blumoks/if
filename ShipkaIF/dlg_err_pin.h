@@ -1,14 +1,7 @@
 #ifndef DLG_ERR_PIN_H
 #define DLG_ERR_PIN_H
-#include "ui_dlg_err_pin.h"
-#include <windows.h>
-#include <QDebug>
-#include <QDir>
-#include <QSettings>
-#include "shipkalogfile.h"
-#include <QDialog>
 
-#define MAX_SIZE 255
+#include <QDialog>
 
 namespace Ui {
 class dlg_err_pin;

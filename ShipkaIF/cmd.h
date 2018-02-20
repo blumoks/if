@@ -4,19 +4,19 @@
 #include <QDebug>
 #include <QStringList>
 #include <Windows.h>
-#include "errorhandler.h"
+#include "dlg_err_pin.h"
+#include "dlg_mess_pin.h"
 #include <iostream>
 #include <string>
 #include <sstream>
 
-using namespace std;
+using namespace:: std;
 
 struct ShipkaInfo
 {
     int flagDevice;
     QString typeDevice;
 };
-
 
 class cmd
 {

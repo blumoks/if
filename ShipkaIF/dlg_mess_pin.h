@@ -1,19 +1,7 @@
 #ifndef DLG_MESS_PIN_H
 #define DLG_MESS_PIN_H
-#include "ui_dlg_mess_pin.h"
-#include <QDebug>
-#include <QString>
-#include <windows.h>
-#include <QDir>
-#include <QSettings>
-#include <QtGui>
-#include <QDebug>
-#include <QtWidgets>
-#include <QDesktopWidget>
-#include "shipkalogfile.h"
-#include <QDialog>
 
-#define MAX_SIZE 255
+#include <QDialog>
 
 namespace Ui {
 class dlg_mess_pin;

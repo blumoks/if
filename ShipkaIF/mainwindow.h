@@ -18,16 +18,9 @@
 #include "cmd.h"
 #include "dlq_input_pin.h"
 #include "dlg_mess_pin.h"
-#include "shipkalogfile.h"
-#include <string>
-#include <tchar.h>
-#include <ctime>
-#include <stdio.h>
-
+#include <QTranslator>
+#include <QLibraryInfo>
 #include <windows.h>
-
-#define MAX_SIZE 255
-
 #define DEVICE_NOT_INITIALIZED	(0x00000001)
 #define DEVICE_NOT_FORMATED		(0x00000002)
 #define PIN_NOT_SETTED			(0x00000004)
@@ -43,21 +36,18 @@ class MainWindow;
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
-
-
+public slots:
+    void translationRu();
+    void translationEn();
+    void help();
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
     void CreateWind();
     void changeEvent(QEvent * event) override;
     CHAR fileLog();
-    QString PathToFolderInfoShipka();
-
-    ShipkaLogFile* ShipkaIniFile;
-
-
-
-
+    QString funPath();
+    void IntetfChange();
 private:
     Ui::MainWindow *ui;
     QPushButton *l_button;
@@ -65,37 +55,23 @@ private:
     QPushButton *s_button;
     dlq_input_pin* dInputPin;
     QTranslator qtLanguageTranslator;
-    QString ParserStr(QString str);
-    QAction *actionQuitter;
-    QAction *actionQuitterRu;
-    QAction *actionQuitterEn;
-    QAction *actionQuitterHelp;
-    QAction *actionQuitterAbout;
-
-    ShipkaInfo shipkaInf;
-    HANDLE hCreateTread;
-
-    ErrorHandler* errHadler2 = new ErrorHandler();
 
 protected:
-    void closeEvent(QCloseEvent *event);
-    void mousePressEvent(QMouseEvent *event);
-    void mouseReleaseEvent(QMouseEvent *event);
-    void mouseMoveEvent(QMouseEvent *event);
-    dlg_aboutProg* dlgAbout;
-    void Thread();
-    QPoint mpos;
+     void mousePressEvent(QMouseEvent *event);
+     void mouseReleaseEvent(QMouseEvent *event);
+     void mouseMoveEvent(QMouseEvent *event);
+     dlg_aboutProg* dlgAbout;
+     void Thread();
 
+
+ QPoint mpos;
 
 private slots:
-    //void timerForChangeInterfDevice();
-    void on_btnOk_clicked();
-    void aboutProgramm();
-   // void on_tabWidget_currentChanged(int index);
-    void translationRu();
-    void translationEn();
-    void help();
-    void on_cmbBoxDevice_currentIndexChanged(const QString &arg1);
+ void on_btnOk_clicked();
+void aboutProgramm();
+
+void on_tabWidget_currentChanged(int index);
+void on_cmbBoxDevice_currentIndexChanged(const QString &arg1);
 };
 
 #endif // MAINWINDOW_H

@@ -1,17 +1,7 @@
 #ifndef DLGLONGERR_H
 #define DLGLONGERR_H
-#include "shipkalogfile.h"
-#include <QDialog>
-#include "ui_dlglongerr.h"
-#include <windows.h>
-#include <QDir>
-#include <QString>
-#include <QSettings>
-#include <QDebug>
-#include <QDesktopWidget>
-#include "shipkalogfile.h"
 
-#define MAX_SIZE 255
+#include <QDialog>
 
 namespace Ui {
 class dlgLongErr;

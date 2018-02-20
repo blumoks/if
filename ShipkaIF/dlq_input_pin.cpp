@@ -2,7 +2,7 @@
 #include "ui_dlq_input_pin.h"
 #include "QDebug"
 
-extern QString StrPinInput;
+extern QString strPinInput;
 
 dlq_input_pin::dlq_input_pin(QWidget *parent) :
     QDialog(parent, Qt::FramelessWindowHint),
@@ -21,7 +21,7 @@ dlq_input_pin::~dlq_input_pin()
 void dlq_input_pin::on_btnOk_clicked()
 {
     qDebug() << ui->editPin->text();
-    StrPinInput = ui->editPin->text();
+    strPinInput = ui->editPin->text();
     //emit sendPin(ui->editPin->text());
     ui->editPin->setText("");
     this->accept();
