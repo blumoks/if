@@ -1,0 +1,39 @@
+#include "dlgerrpin.h"
+#include "ui_dlgerrpin.h"
+#include "mainwindow.h"
+
+int FLAG_Tab;
+
+DlgErrPin::DlgErrPin(QWidget *parent) :
+    QDialog(parent,Qt::FramelessWindowHint),
+    ui(new Ui::DlgErrPin)
+{
+    ui->setupUi(this);
+
+     QObject::connect(ui->btnClose, SIGNAL(clicked()), this, SLOT(close()));
+     QObject::connect(ui->btnOk, SIGNAL(clicked()), this, SLOT(close()));
+
+
+     // неверный PIN-код
+     // устройство заблокировано
+     //
+}
+
+DlgErrPin::~DlgErrPin()
+{
+    delete ui;
+}
+
+void DlgErrPin :: a(int i)
+{
+    FLAG_Tab = i;
+
+    if (FLAG_Tab == 0)
+       ui->lblErrMsg->setText("Введите Pin-код");
+    if (FLAG_Tab == 1)
+       ui->lblErrMsg->setText("Введите новый Pin-код");
+    if (FLAG_Tab == 1)
+       ui->lblErrMsg->setText("Ошибка при вводе нового Pin-кода");
+    if (FLAG_Tab == 10)
+       ui->lblErrMsg->setText("Смена Pin-кода прошла успешно");
+}

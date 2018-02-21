@@ -1,0 +1,39 @@
+syntax: glob
+
+# Dirs
+Distrib/*
+Design*/*
+tmp/*
+ITUserOptions_back*/*
+
+# Binaries
+*.dll
+*.exe
+*.bat
+*.pdb
+*.exp
+*.ilk
+*.ipch
+
+# Crap
+#*_ReSharper*
+#*_UpgradeReport*
+#*cmake*
+#*CMake*
+
+# Otros
+*.zip
+*.rar
+*.user
+*.template
+*.orig
+*.old
+*.xml
+*.XML
+*.suo
+*.sdf
+*.ncb
+*.aps
+*.opensdf
+Readme.txt
+setbuild.pl
